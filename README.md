@@ -8,10 +8,10 @@ Winter Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
 <div class="tg-wrap"><table>
 <tbody>
   <tr>
-    <td><b>Date</b></td>
-    <td><b>Group 2</b></td>
-    <td><b>Group 3</b></td>
-    <td><b>Group 1</b></td>
+    <th><b>Date</b></th>
+    <th><b>Group 2</b></th>
+    <th><b>Group 3</b></th>
+    <th><b>Group 1</b></th>
   </tr>
   <tr>
     <td>20.02</td>

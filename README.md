@@ -69,7 +69,7 @@ Winter Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
   </tr>
   <tr>
     <td>03.04</td>
-    <td colspan="3">Deadline P1</td>
+    <th colspan="3">Deadline P1</th>
   </tr>
   <tr>
     <td>04.04</td>
@@ -85,7 +85,7 @@ Winter Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
   </tr>
   <tr>
     <td>10.04</td>
-    <td colspan="3">Introduce P2</td>
+    <th colspan="3">Introduce P2</th>
   </tr>
   <tr>
     <td>16.04</td>
@@ -143,7 +143,7 @@ Winter Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
   </tr>
   <tr>
     <td>03.06</td>
-    <td colspan="3">Deadline P2</td>
+    <th colspan="3">Deadline P2</th>
   </tr>
   <tr>
     <td>04.06</td>

@@ -1,6 +1,6 @@
 ## Advanced Machine Learning
 
-Winter Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](https://github.com/woznicak)
+Summer Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](https://github.com/woznicak)
 
 *Materials for courses conducted at the Faculty of Mathematics and Information Sciences, Warsaw University of Technology.*
 

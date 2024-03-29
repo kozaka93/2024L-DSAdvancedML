@@ -16,7 +16,7 @@ def createFeatureInteractions(X : np.ndarray) -> np.ndarray:
             X = np.column_stack((X, new_col))
     return X
 
-def fitComparisonModels(X_train: np.ndarray, y_train : np.ndarray, X_test : np.array) -> tuple:
+def fitComparisonModels(X_train: np.ndarray, y_train : np.ndarray, X_test : np.ndarray) -> tuple:
     """
     fit comparison models to check accuracy vs our LogReg
     """

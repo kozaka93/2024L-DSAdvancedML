@@ -4,6 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
+from Adam import AdamOptim
 
 class LogisticRegression:
     """
@@ -29,7 +30,7 @@ class LogisticRegression:
         plot_params(): Plots the updates of weights, bias, and loss over time.
     """
 
-    def __init__(self, input_dim):
+    def __init__(self, input_dim : int) -> None:
         self.input_dim = input_dim
         self.weights = np.zeros(input_dim)
         self.bias = 0
@@ -37,16 +38,16 @@ class LogisticRegression:
         self.bias_updates = []
         self.losses = []
 
-    def sigmoid(self, z):
+    def sigmoid(self, z : float) -> float:
         z = z.astype(float)
         return 1 / (1 + np.exp(-z))
     
-    def predict(self, X):
+    def predict(self, X : np.ndarray) -> float:
 
         z = np.dot(X, self.weights) + self.bias
         return self.sigmoid(z)
     
-    def train(self, X, y, optimizer, epochs, batch_size, patience = 10):
+    def train(self, X : np.ndarray, y : np.ndarray, optimizer : AdamOptim, epochs : int, batch_size : int, patience = 10) -> None:
 
         m = X.shape[0]
         num_batches = m // batch_size

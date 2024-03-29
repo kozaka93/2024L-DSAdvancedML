@@ -38,6 +38,7 @@ class LogisticRegression:
         self.losses = []
 
     def sigmoid(self, z):
+
         z = z.astype(float)
         return 1 / (1 + np.exp(-z))
     
@@ -71,13 +72,17 @@ class LogisticRegression:
 
                 self.weights, self.bias = optimizer.update(epoch+1, self.weights, self.bias, dw, db)
 
+
+
                 batch_loss = -np.mean(y_batch * np.log(a) + (1 - y_batch) * np.log(1 - a))
                 epoch_loss += batch_loss
 
             epoch_loss /= num_batches
             self.losses.append(epoch_loss)
+
             self.weights_updates.append(self.weights)
             self.bias_updates.append(self.bias)
+
             if epoch_loss < best_loss:
                 best_loss = epoch_loss
                 patience_counter = 0

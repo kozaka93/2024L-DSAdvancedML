@@ -44,18 +44,23 @@ class LogisticRegression:
         z = z.astype(float)
         return 1 / (1 + np.exp(-z))
     
-    def predict(self, X : np.ndarray) -> float:
+    def predict(self, X : np.ndarray):
 
         z = np.dot(X, self.weights) + self.bias
         return self.sigmoid(z)
     
-    def train(self, X : np.ndarray, y : np.ndarray, optimizer : AdamOptim, epochs : int, batch_size : int, patience = 10) -> None:
+    def train(self, X : np.ndarray, y : np.ndarray, optimizer : AdamOptim, epochs : int, batch_size : int, patience = 10, Xval=None, yval=None) -> None:
 
         m = X.shape[0]
         num_batches = m // batch_size
 
         best_loss = np.inf
+        best_val_loss = np.inf
         patience_counter = 0
+
+        if not isinstance(Xval, np.ndarray):
+            Xval = X
+            yval = y
 
         for epoch in range(epochs):
             epoch_loss = 0
@@ -85,8 +90,12 @@ class LogisticRegression:
             self.losses.append(epoch_loss)
             self.weights_updates.append(self.weights)
             self.bias_updates.append(self.bias)
-            if epoch_loss < best_loss:
-                best_loss = epoch_loss
+
+            val_predicts = self.predict(Xval).round()
+            epoch_val_loss = -np.mean(yval * np.log(val_predicts) + (1 - yval) * np.log(1 - val_predicts))
+
+            if epoch_val_loss < best_val_loss:
+                best_val_loss = epoch_val_loss
                 patience_counter = 0
             else:
                 patience_counter += 1

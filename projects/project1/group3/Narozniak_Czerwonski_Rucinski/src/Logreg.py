@@ -5,6 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 from Adam import AdamOptim
+from irls_optimizer import IRLS
+
 
 class LogisticRegression:
     """
@@ -66,12 +68,16 @@ class LogisticRegression:
                 
                 z = np.dot(X_batch, self.weights) + self.bias
                 a = self.sigmoid(z)
+
+                if isinstance(optimizer, AdamOptim):
+                    dw = np.dot(X_batch.T, (a - y_batch)) / batch_size
+                    db = np.mean(a - y_batch)
+
+                    self.weights, self.bias = optimizer.update(epoch+1, self.weights, self.bias, dw, db)
+                elif isinstance(optimizer, IRLS):
+                    B = np.concatenate([np.array([self.bias]), self.weights])
+                    self.weights, self.bias = optimizer.update(B, X, y)
                 
-                dw = np.dot(X_batch.T, (a - y_batch)) / batch_size
-                db = np.mean(a - y_batch)
-
-                self.weights, self.bias = optimizer.update(epoch+1, self.weights, self.bias, dw, db)
-
                 batch_loss = -np.mean(y_batch * np.log(a) + (1 - y_batch) * np.log(1 - a))
                 epoch_loss += batch_loss
 

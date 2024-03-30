@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from Adam import AdamOptim
 from irls_optimizer import IRLS
 
+
 class LogisticRegression:
     """
     Logistic Regression classifier.
@@ -31,7 +32,7 @@ class LogisticRegression:
         plot_params(): Plots the updates of weights, bias, and loss over time.
     """
 
-    def __init__(self, input_dim):
+    def __init__(self, input_dim : int) -> None:
         self.input_dim = input_dim
         self.weights = np.zeros(input_dim)
         self.bias = 0
@@ -39,17 +40,16 @@ class LogisticRegression:
         self.bias_updates = []
         self.losses = []
 
-    def sigmoid(self, z):
-
+    def sigmoid(self, z : float) -> float:
         z = z.astype(float)
         return 1 / (1 + np.exp(-z))
     
-    def predict(self, X):
+    def predict(self, X : np.ndarray) -> float:
 
         z = np.dot(X, self.weights) + self.bias
         return self.sigmoid(z)
     
-    def train(self, X, y, optimizer, epochs, batch_size, patience = 10):
+    def train(self, X : np.ndarray, y : np.ndarray, optimizer : AdamOptim, epochs : int, batch_size : int, patience = 10) -> None:
 
         m = X.shape[0]
         num_batches = m // batch_size
@@ -77,16 +77,14 @@ class LogisticRegression:
                 elif isinstance(optimizer, IRLS):
                     B = np.concatenate([np.array([self.bias]), self.weights])
                     self.weights, self.bias = optimizer.update(B, X, y)
-
+                
                 batch_loss = -np.mean(y_batch * np.log(a) + (1 - y_batch) * np.log(1 - a))
                 epoch_loss += batch_loss
 
             epoch_loss /= num_batches
             self.losses.append(epoch_loss)
-
             self.weights_updates.append(self.weights)
             self.bias_updates.append(self.bias)
-
             if epoch_loss < best_loss:
                 best_loss = epoch_loss
                 patience_counter = 0

@@ -29,6 +29,7 @@ class AdamOptim():
         self.eta = eta
         
     def update(self, t, w, b, dw, db):
+
         self.m_dw = self.beta1*self.m_dw + (1-self.beta1)*dw
         self.m_db = self.beta1*self.m_db + (1-self.beta1)*db
 
@@ -40,9 +41,9 @@ class AdamOptim():
         v_dw_corr = self.v_dw/(1-self.beta2**t)
         v_db_corr = self.v_db/(1-self.beta2**t)
 
-
         v_dw_corr = v_dw_corr.astype(float)
         v_db_corr = v_db_corr.astype(float)
-        w = w - self.eta*(m_dw_corr/(np.sqrt(v_dw_corr)+self.epsilon))
-        b = b - self.eta*(m_db_corr/(np.sqrt(v_db_corr)+self.epsilon))
+        w = w - self.eta*(m_dw_corr/(np.sqrt(np.abs(v_dw_corr)+self.epsilon)+self.epsilon))
+        b = b - self.eta*(m_db_corr/(np.sqrt(np.abs(v_db_corr)+self.epsilon)+self.epsilon))
+
         return w, b

@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from Adam import AdamOptim
 from irls_optimizer import IRLS
 from tqdm import tqdm
+from SGD import SGD
 
 class LogisticRegression:
     """
@@ -32,34 +33,40 @@ class LogisticRegression:
         plot_params(): Plots the updates of weights, bias, and loss over time.
     """
 
-    def __init__(self, input_dim : int) -> None:
+    def __init__(self, input_dim):
         self.input_dim = input_dim
         self.weights = np.zeros(input_dim)
         self.bias = 0
         self.weights_updates = []
         self.bias_updates = []
         self.losses = []
+        self.val_losses = []
 
-    def sigmoid(self, z : float) -> float:
+    def sigmoid(self, z):
+
         z = z.astype(float)
         return 1 / (1 + np.exp(-z))
     
-    def predict(self, X : np.ndarray) -> float:
+    def predict(self, X):
 
         z = np.dot(X, self.weights) + self.bias
         return self.sigmoid(z)
     
-    def train(self, X : np.ndarray, y : np.ndarray, optimizer : AdamOptim, epochs : int, batch_size : int, patience = 10) -> None:
+    def train(self, X, y, optimizer, epochs, batch_size, X_val = None, y_val = None, patience = 10):
 
         m = X.shape[0]
         num_batches = m // batch_size
 
         best_loss = np.inf
-        best_loss_index = 0
+        best_train_loss_index = 0
+        best_val_loss_index = 0
+        best_val_loss = np.inf
+
         patience_counter = 0
 
         for epoch in tqdm(range(epochs), desc="Epoch:"):
             epoch_loss = 0
+            epoch_val_loss = 0
             for batch in range(num_batches):
                 
                 start = batch * batch_size
@@ -70,7 +77,7 @@ class LogisticRegression:
                 z = np.dot(X_batch, self.weights) + self.bias
                 a = self.sigmoid(z)
 
-                if isinstance(optimizer, AdamOptim):
+                if isinstance(optimizer, AdamOptim) or isinstance(optimizer, SGD):
                     dw = np.dot(X_batch.T, (a - y_batch)) / batch_size
                     db = np.mean(a - y_batch)
 
@@ -79,54 +86,83 @@ class LogisticRegression:
                     B = np.concatenate([np.array([self.bias]), self.weights])
                     B = B.astype(float)
                     self.weights, self.bias = optimizer.update(B, X, y)
-                
-                batch_loss = -np.mean(y_batch * np.log(a) + (1 - y_batch) * np.log(1 - a))
-                epoch_loss += batch_loss
 
-            epoch_loss /= num_batches
+            z = np.dot(X, self.weights) + self.bias
+            a = self.sigmoid(z)
+            epoch_loss = -np.mean(y * np.log(a) + (1 - y) * np.log(1 - a))
+
             self.losses.append(epoch_loss)
             self.weights_updates.append(self.weights)
             self.bias_updates.append(self.bias)
-            if epoch_loss < best_loss:
-                best_loss = epoch_loss
-                best_loss_index = epoch
-                patience_counter = 0
+
+            if X_val is not None:
+                # Calculate validation loss
+                z_val = np.dot(X_val, self.weights) + self.bias
+                a_val = self.sigmoid(z_val)
+                epoch_val_loss = -np.mean(
+                    y_val * np.log(a_val) + (1 - y_val) * np.log(1 - a_val))
+                self.val_losses.append(epoch_val_loss)
+                # Early stoppping based on validation loss
+                if epoch_val_loss < best_val_loss:
+                    best_val_loss = epoch_val_loss
+                    best_val_loss_index = epoch
+                    patience_counter = 0
+                else:
+                    patience_counter += 1
+
+                if patience_counter >= patience:
+                    print('Early stopping after epoch', epoch)
+                    print("Reverting to the weights corresponding to the lowest validation loss")
+                    # Add + 1 because -1 corresponds to the last weights so e.g. with
+                    # patience equal to 1 you need index -2
+
+                    self.weights = self.weights_updates[best_val_loss_index]
+                    self.bias = self.bias_updates[best_val_loss_index]
+                    break
             else:
-                patience_counter += 1
+                # Early stopping based on the training loss
+                if epoch_loss < best_loss:
+                    best_loss = epoch_loss
+                    best_train_loss_index = epoch
+                    patience_counter = 0
+                else:
+                    patience_counter += 1
 
-            if patience_counter >= patience:
-                print('Early stopping after epoch', epoch)
-                print("Reverting to the weights corresponding to the lowest loss")
-                # Add + 1 because -1 corresponds to the last weights so e.g. with
-                # patience equal to 1 you need index -2
+                if patience_counter >= patience:
+                    print('Early stopping after epoch', epoch)
+                    print("Reverting to the weights corresponding to the lowest train loss")
+                    # Add + 1 because -1 corresponds to the last weights so e.g. with
+                    # patience equal to 1 you need index -2
 
-                self.weights = self.weights_updates[best_loss_index]
-                self.bias = self.bias_updates[best_loss_index]
-                break
+                    self.weights = self.weights_updates[best_train_loss_index]
+                    self.bias = self.bias_updates[best_train_loss_index]
+                    break
 
 
     def get_params(self):
         return self.weights, self.bias, self.weights_updates, self.bias_updates, self.losses
 
     def plot_params(self):
-        plt.figure(figsize=(18, 6))
-        plt.subplot(1, 3, 1)
+        plt.figure(figsize=(12, 6))
+        plt.subplot(1, 2, 1)
         plt.plot(self.weights_updates)
         plt.title('Weights updates')
         plt.xlabel('Iteration')
         plt.ylabel('Weights')
 
-        plt.subplot(1, 3, 2)
+        plt.subplot(1, 2, 2)
         plt.plot(self.bias_updates)
         plt.title('Bias updates')
         plt.xlabel('Iteration')
         plt.ylabel('Bias')
 
-        plt.subplot(1, 3, 3)
-        plt.plot(self.losses)
+        plt.tight_layout()
+        plt.show()
+
+    def plot_loss(self):
+        plt.plot(self.val_losses)
         plt.title('Loss over time')
         plt.xlabel('Iteration')
         plt.ylabel('Loss')
 
-        plt.tight_layout()
-        plt.show()
+        

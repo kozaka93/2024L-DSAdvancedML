@@ -18,6 +18,5 @@
     - `training_results_classifiers.json` - JSON file containing the training results of LDA, QDA, Tree, RF
     - `training_results_interactions.json` - JSON file containing the training results of the models with interactions (only small datasets)
     - `utils.py` - Python file containing the utility functions used in the project
- - `Report.pdf` - Report
- - `.gitignore`
+ - `report.pdf` - Report
 

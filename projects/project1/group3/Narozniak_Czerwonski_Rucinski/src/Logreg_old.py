@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 from Adam import AdamOptim
 from irls_optimizer import IRLS
+from SGD import SGD
 
 class LogisticRegression:
     """
@@ -71,7 +72,7 @@ class LogisticRegression:
                 z = np.dot(X_batch, self.weights) + self.bias
                 a = self.sigmoid(z)
 
-                if isinstance(optimizer, AdamOptim):
+                if isinstance(optimizer, AdamOptim) or isinstance(optimizer, SGD):
                     dw = np.dot(X_batch.T, (a - y_batch)) / batch_size
                     db = np.mean(a - y_batch)
 

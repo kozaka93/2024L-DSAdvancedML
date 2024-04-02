@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 from Adam import AdamOptim
 from irls_optimizer import IRLS
-
+from tqdm import tqdm
 
 class LogisticRegression:
     """
@@ -55,9 +55,10 @@ class LogisticRegression:
         num_batches = m // batch_size
 
         best_loss = np.inf
+        best_loss_index = 0
         patience_counter = 0
 
-        for epoch in range(epochs):
+        for epoch in tqdm(range(epochs), desc="Epoch:"):
             epoch_loss = 0
             for batch in range(num_batches):
                 
@@ -76,6 +77,7 @@ class LogisticRegression:
                     self.weights, self.bias = optimizer.update(epoch+1, self.weights, self.bias, dw, db)
                 elif isinstance(optimizer, IRLS):
                     B = np.concatenate([np.array([self.bias]), self.weights])
+                    B = B.astype(float)
                     self.weights, self.bias = optimizer.update(B, X, y)
                 
                 batch_loss = -np.mean(y_batch * np.log(a) + (1 - y_batch) * np.log(1 - a))
@@ -87,12 +89,19 @@ class LogisticRegression:
             self.bias_updates.append(self.bias)
             if epoch_loss < best_loss:
                 best_loss = epoch_loss
+                best_loss_index = epoch
                 patience_counter = 0
             else:
                 patience_counter += 1
 
             if patience_counter >= patience:
                 print('Early stopping after epoch', epoch)
+                print("Reverting to the weights corresponding to the lowest loss")
+                # Add + 1 because -1 corresponds to the last weights so e.g. with
+                # patience equal to 1 you need index -2
+
+                self.weights = self.weights_updates[best_loss_index]
+                self.bias = self.bias_updates[best_loss_index]
                 break
 
 

@@ -5,7 +5,7 @@ class IRLS:
     def update(self, B,  X, y):
         # Add 1 as the first column to X
         X_ = np.concatenate([np.ones(shape=(X.shape[0], 1)), X], axis=1)
-        z = X_ @ B
+        z = (X_ @ B).astype(float)
         p = 1 / (1 + np.exp(-z))
         W = np.diagflat(p * (1 - p))
         W_inv = np.diagflat(1. / np.diagonal(W))

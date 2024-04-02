@@ -49,16 +49,18 @@ class LogisticRegression:
         z = np.dot(X, self.weights) + self.bias
         return self.sigmoid(z)
     
-    def train(self, X, y, optimizer, epochs, batch_size, patience = 10):
+    def train(self, X, y, optimizer, epochs, batch_size, X_val = None, y_val = None, patience = 10):
 
         m = X.shape[0]
         num_batches = m // batch_size
 
         best_loss = np.inf
+        best_val_loss = np.inf
         patience_counter = 0
 
         for epoch in range(epochs):
             epoch_loss = 0
+            epoch_val_loss = 0
             for batch in range(num_batches):
                 
                 start = batch * batch_size
@@ -81,21 +83,45 @@ class LogisticRegression:
                 batch_loss = -np.mean(y_batch * np.log(a) + (1 - y_batch) * np.log(1 - a))
                 epoch_loss += batch_loss
 
-            epoch_loss /= num_batches
-            self.losses.append(epoch_loss)
+                if X_val is not None:
+                    z_val = np.dot(X_val, self.weights) + self.bias
+                    a_val = self.sigmoid(z_val)
+                    val_loss = -np.mean(y_val * np.log(a_val) + (1 - y_val) * np.log(1 - a_val))
+                    epoch_val_loss += val_loss
+            
 
-            self.weights_updates.append(self.weights)
-            self.bias_updates.append(self.bias)
+            if X_val is not None:
+                epoch_val_loss /= num_batches
+                self.losses.append(epoch_val_loss)
 
-            if epoch_loss < best_loss:
-                best_loss = epoch_loss
-                patience_counter = 0
-            else:
-                patience_counter += 1
+                self.weights_updates.append(self.weights)
+                self.bias_updates.append(self.bias)
 
-            if patience_counter >= patience:
-                print('Early stopping after epoch', epoch)
-                break
+                if epoch_val_loss < best_val_loss:
+                    best_val_loss = epoch_val_loss
+                    patience_counter = 0
+                else:
+                    patience_counter += 1
+
+                if patience_counter >= patience:
+                    print('Early stopping after epoch', epoch)
+                    break
+            else:        
+                epoch_loss /= num_batches
+                self.losses.append(epoch_loss)
+
+                self.weights_updates.append(self.weights)
+                self.bias_updates.append(self.bias)
+
+                if epoch_loss < best_loss:
+                    best_loss = epoch_loss
+                    patience_counter = 0
+                else:
+                    patience_counter += 1
+
+                if patience_counter >= patience:
+                    print('Early stopping after epoch', epoch)
+                    break
 
 
     def get_params(self):

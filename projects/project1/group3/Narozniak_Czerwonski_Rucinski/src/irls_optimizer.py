@@ -10,6 +10,10 @@ class IRLS:
         W = np.diagflat(p * (1 - p))
         W_inv = np.diagflat(1. / np.diagonal(W))
         response = z + W_inv @ (y - p)
-        xwx_inv = np.linalg.inv(X_.T @ W @ X_)
+        try:
+            xwx_inv = np.linalg.pinv(X_.T @ W @ X_)
+        # In case correlated features were not removed
+        except np.linalg.LinAlgError as e:
+            return np.full(B[1:].shape, np.nan), np.nan
         new_B = xwx_inv @ X_.T @ W @ response
         return new_B[1:], new_B[0]

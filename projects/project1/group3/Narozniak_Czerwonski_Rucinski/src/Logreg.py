@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 from Adam import AdamOptim
 from irls_optimizer import IRLS
+from tqdm import tqdm
 from SGD import SGD
 
 class LogisticRegression:
@@ -57,10 +58,13 @@ class LogisticRegression:
         num_batches = m // batch_size
 
         best_loss = np.inf
+        best_train_loss_index = 0
+        best_val_loss_index = 0
         best_val_loss = np.inf
+
         patience_counter = 0
 
-        for epoch in range(epochs):
+        for epoch in tqdm(range(epochs), desc="Epoch:"):
             epoch_loss = 0
             epoch_val_loss = 0
             for batch in range(num_batches):
@@ -80,47 +84,58 @@ class LogisticRegression:
                     self.weights, self.bias = optimizer.update(epoch+1, self.weights, self.bias, dw, db)
                 elif isinstance(optimizer, IRLS):
                     B = np.concatenate([np.array([self.bias]), self.weights])
+                    B = B.astype(float)
                     self.weights, self.bias = optimizer.update(B, X, y)
 
             z = np.dot(X, self.weights) + self.bias
             a = self.sigmoid(z)
             epoch_loss = -np.mean(y * np.log(a) + (1 - y) * np.log(1 - a))
 
+            self.losses.append(epoch_loss)
+            self.weights_updates.append(self.weights)
+            self.bias_updates.append(self.bias)
+
             if X_val is not None:
+                # Calculate validation loss
                 z_val = np.dot(X_val, self.weights) + self.bias
                 a_val = self.sigmoid(z_val)
-                epoch_val_loss = -np.mean(y_val * np.log(a_val) + (1 - y_val) * np.log(1 - a_val))
+                epoch_val_loss = -np.mean(
+                    y_val * np.log(a_val) + (1 - y_val) * np.log(1 - a_val))
                 self.val_losses.append(epoch_val_loss)
-            self.losses.append(epoch_loss)
-
-
-            if X_val is not None:
-                self.losses.append(epoch_val_loss)
-                self.weights_updates.append(self.weights)
-                self.bias_updates.append(self.bias)
-
+                # Early stoppping based on validation loss
                 if epoch_val_loss < best_val_loss:
                     best_val_loss = epoch_val_loss
+                    best_val_loss_index = epoch
                     patience_counter = 0
                 else:
                     patience_counter += 1
 
                 if patience_counter >= patience:
                     print('Early stopping after epoch', epoch)
-                    break
-            else:        
-                self.losses.append(epoch_loss)
-                self.weights_updates.append(self.weights)
-                self.bias_updates.append(self.bias)
+                    print("Reverting to the weights corresponding to the lowest validation loss")
+                    # Add + 1 because -1 corresponds to the last weights so e.g. with
+                    # patience equal to 1 you need index -2
 
+                    self.weights = self.weights_updates[best_val_loss_index]
+                    self.bias = self.bias_updates[best_val_loss_index]
+                    break
+            else:
+                # Early stopping based on the training loss
                 if epoch_loss < best_loss:
                     best_loss = epoch_loss
+                    best_train_loss_index = epoch
                     patience_counter = 0
                 else:
                     patience_counter += 1
 
                 if patience_counter >= patience:
                     print('Early stopping after epoch', epoch)
+                    print("Reverting to the weights corresponding to the lowest train loss")
+                    # Add + 1 because -1 corresponds to the last weights so e.g. with
+                    # patience equal to 1 you need index -2
+
+                    self.weights = self.weights_updates[best_train_loss_index]
+                    self.bias = self.bias_updates[best_train_loss_index]
                     break
 
 

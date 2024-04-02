@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 from Adam import AdamOptim
 from irls_optimizer import IRLS
-from SGD import SGD
+
 
 class LogisticRegression:
     """
@@ -32,7 +32,7 @@ class LogisticRegression:
         plot_params(): Plots the updates of weights, bias, and loss over time.
     """
 
-    def __init__(self, input_dim):
+    def __init__(self, input_dim : int) -> None:
         self.input_dim = input_dim
         self.weights = np.zeros(input_dim)
         self.bias = 0
@@ -40,17 +40,16 @@ class LogisticRegression:
         self.bias_updates = []
         self.losses = []
 
-    def sigmoid(self, z):
-
+    def sigmoid(self, z : float) -> float:
         z = z.astype(float)
         return 1 / (1 + np.exp(-z))
     
-    def predict(self, X):
+    def predict(self, X : np.ndarray):
 
         z = np.dot(X, self.weights) + self.bias
         return self.sigmoid(z)
     
-    def train(self, X, y, optimizer, epochs, batch_size, X_val = None, y_val = None, patience = 10):
+    def train(self, X : np.ndarray, y : np.ndarray, optimizer : AdamOptim, epochs : int, batch_size : int, patience = 10, Xval=None, yval=None) -> None:
 
         m = X.shape[0]
         num_batches = m // batch_size
@@ -59,9 +58,12 @@ class LogisticRegression:
         best_val_loss = np.inf
         patience_counter = 0
 
+        if not isinstance(Xval, np.ndarray):
+            Xval = X
+            yval = y
+
         for epoch in range(epochs):
             epoch_loss = 0
-            epoch_val_loss = 0
             for batch in range(num_batches):
                 
                 start = batch * batch_size
@@ -72,7 +74,7 @@ class LogisticRegression:
                 z = np.dot(X_batch, self.weights) + self.bias
                 a = self.sigmoid(z)
 
-                if isinstance(optimizer, AdamOptim) or isinstance(optimizer, SGD):
+                if isinstance(optimizer, AdamOptim):
                     dw = np.dot(X_batch.T, (a - y_batch)) / batch_size
                     db = np.mean(a - y_batch)
 
@@ -80,75 +82,51 @@ class LogisticRegression:
                 elif isinstance(optimizer, IRLS):
                     B = np.concatenate([np.array([self.bias]), self.weights])
                     self.weights, self.bias = optimizer.update(B, X, y)
-
+                
                 batch_loss = -np.mean(y_batch * np.log(a) + (1 - y_batch) * np.log(1 - a))
                 epoch_loss += batch_loss
 
-                if X_val is not None:
-                    z_val = np.dot(X_val, self.weights) + self.bias
-                    a_val = self.sigmoid(z_val)
-                    val_loss = -np.mean(y_val * np.log(a_val) + (1 - y_val) * np.log(1 - a_val))
-                    epoch_val_loss += val_loss
-            
+            epoch_loss /= num_batches
+            self.losses.append(epoch_loss)
+            self.weights_updates.append(self.weights)
+            self.bias_updates.append(self.bias)
 
-            if X_val is not None:
-                epoch_val_loss /= num_batches
-                self.losses.append(epoch_val_loss)
+            val_predicts = self.predict(Xval).round()
+            epoch_val_loss = -np.mean(yval * np.log(val_predicts) + (1 - yval) * np.log(1 - val_predicts))
 
-                self.weights_updates.append(self.weights)
-                self.bias_updates.append(self.bias)
+            if epoch_val_loss < best_val_loss:
+                best_val_loss = epoch_val_loss
+                patience_counter = 0
+            else:
+                patience_counter += 1
 
-                if epoch_val_loss < best_val_loss:
-                    best_val_loss = epoch_val_loss
-                    patience_counter = 0
-                else:
-                    patience_counter += 1
-
-                if patience_counter >= patience:
-                    print('Early stopping after epoch', epoch)
-                    break
-            else:        
-                epoch_loss /= num_batches
-                self.losses.append(epoch_loss)
-
-                self.weights_updates.append(self.weights)
-                self.bias_updates.append(self.bias)
-
-                if epoch_loss < best_loss:
-                    best_loss = epoch_loss
-                    patience_counter = 0
-                else:
-                    patience_counter += 1
-
-                if patience_counter >= patience:
-                    print('Early stopping after epoch', epoch)
-                    break
+            if patience_counter >= patience:
+                print('Early stopping after epoch', epoch)
+                break
 
 
     def get_params(self):
         return self.weights, self.bias, self.weights_updates, self.bias_updates, self.losses
 
     def plot_params(self):
-        plt.figure(figsize=(12, 6))
-        plt.subplot(1, 2, 1)
+        plt.figure(figsize=(18, 6))
+        plt.subplot(1, 3, 1)
         plt.plot(self.weights_updates)
         plt.title('Weights updates')
         plt.xlabel('Iteration')
         plt.ylabel('Weights')
 
-        plt.subplot(1, 2, 2)
+        plt.subplot(1, 3, 2)
         plt.plot(self.bias_updates)
         plt.title('Bias updates')
         plt.xlabel('Iteration')
         plt.ylabel('Bias')
 
-        plt.tight_layout()
-        plt.show()
-
-    def plot_loss(self):
+        plt.subplot(1, 3, 3)
         plt.plot(self.losses)
         plt.title('Loss over time')
         plt.xlabel('Iteration')
         plt.ylabel('Loss')
 
-        
+        plt.tight_layout()
+        plt.show()

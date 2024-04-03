@@ -35,8 +35,8 @@ def remove_collinear(X):
     columns.append(X[:,i])
   
   columns_used = []
-  columns_stashed = np.set()
-  columns_removed = np.set()
+  columns_stashed = set()
+  columns_removed = set()
   for i in range(p):
     columns_used.append(i)
 

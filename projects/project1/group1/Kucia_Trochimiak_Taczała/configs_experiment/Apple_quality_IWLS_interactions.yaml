@@ -1,0 +1,6 @@
+optimizer: IWLS
+data_name: AppleQuality
+epochs: 500
+batch_size: 4000
+test_split: 0.2
+interactions: True

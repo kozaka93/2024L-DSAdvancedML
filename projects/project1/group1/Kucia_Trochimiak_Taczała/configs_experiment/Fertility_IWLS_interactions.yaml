@@ -1,0 +1,6 @@
+optimizer: IWLS
+data_name: Fertility
+epochs: 500
+batch_size: 100
+test_split: 0.2
+interactions: True

@@ -1,0 +1,5 @@
+optimizer: ADAM
+data_name: PredictStudentsDropoutSuccess
+epochs: 500
+batch_size: 64
+test_split: 0.2

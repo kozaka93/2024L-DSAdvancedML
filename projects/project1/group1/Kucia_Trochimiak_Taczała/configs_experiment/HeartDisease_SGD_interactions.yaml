@@ -1,0 +1,6 @@
+optimizer: SGD
+data_name: HeartDisease
+epochs: 500
+batch_size: 1
+test_split: 0.2
+interactions: True

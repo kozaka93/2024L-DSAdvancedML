@@ -1,0 +1,5 @@
+optimizer: SGD
+data_name: AppleQuality
+epochs: 500
+batch_size: 1
+test_split: 0.2

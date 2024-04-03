@@ -66,18 +66,18 @@ def remove_collinear(X):
         for index in columns_stashed:
           columns_used.append(index)
         heapq.heapify(columns_used)
-        columns_removed.clear()
+        columns_stashed.clear()
         last_removed = -1
 
-    # Recreating the matrix
-    is_used = [False for i in range(p)]
-    for index in columns_used:
-      is_used[index] = True
+  # Recreating the matrix
+  is_used = [False for i in range(p)]
+  for index in columns_used:
+    is_used[index] = True
 
-    columns_used = []
-    for i in range(p):
-      if is_used[i]:
-        columns_used.append(columns[i])
+  columns_used = []
+  for i in range(p):
+    if is_used[i]:
+      columns_used.append(columns[i])
 
-    X_clean = np.column_stack(columns_used)
-    return X_clean, columns_removed
+  X_clean = np.column_stack(columns_used)
+  return X_clean, columns_removed

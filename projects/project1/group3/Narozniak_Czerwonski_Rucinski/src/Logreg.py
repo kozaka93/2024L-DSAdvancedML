@@ -8,6 +8,7 @@ from Adam import AdamOptim
 from irls_optimizer import IRLS
 from tqdm import tqdm
 from SGD import SGD
+import math
 
 class LogisticRegression:
     """
@@ -55,7 +56,7 @@ class LogisticRegression:
     def train(self, X, y, optimizer, epochs, batch_size, X_val = None, y_val = None, patience = 10):
 
         m = X.shape[0]
-        num_batches = m // batch_size
+        num_batches = math.ceil(m / batch_size)
 
         best_loss = np.inf
         best_train_loss_index = 0
@@ -85,7 +86,7 @@ class LogisticRegression:
                 elif isinstance(optimizer, IRLS):
                     B = np.concatenate([np.array([self.bias]), self.weights])
                     B = B.astype(float)
-                    self.weights, self.bias = optimizer.update(B, X, y)
+                    self.weights, self.bias = optimizer.update(B, X_batch.astype(float), y_batch.astype(float))
 
             z = np.dot(X, self.weights) + self.bias
             a = self.sigmoid(z)

@@ -5,10 +5,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 from Adam import AdamOptim
-from irls_optimizer import IRLS
+from projects.project1.group3.Narozniak_Czerwonski_Rucinski.src.IRLS import IRLS
 from tqdm import tqdm
 from SGD import SGD
 import math
+
 
 class LogisticRegression:
     """
@@ -47,13 +48,15 @@ class LogisticRegression:
 
         z = z.astype(float)
         return 1 / (1 + np.exp(-z))
-    
+
     def predict(self, X):
 
         z = np.dot(X, self.weights) + self.bias
         return self.sigmoid(z)
-    
-    def train(self, X, y, optimizer, epochs, batch_size, X_val = None, y_val = None, patience = 10):
+
+    def train(
+        self, X, y, optimizer, epochs, batch_size, X_val=None, y_val=None, patience=10
+    ):
 
         m = X.shape[0]
         num_batches = math.ceil(m / batch_size)
@@ -69,12 +72,12 @@ class LogisticRegression:
             epoch_loss = 0
             epoch_val_loss = 0
             for batch in range(num_batches):
-                
+
                 start = batch * batch_size
                 end = start + batch_size
                 X_batch = X[start:end]
                 y_batch = y[start:end]
-                
+
                 z = np.dot(X_batch, self.weights) + self.bias
                 a = self.sigmoid(z)
 
@@ -82,11 +85,15 @@ class LogisticRegression:
                     dw = np.dot(X_batch.T, (a - y_batch)) / batch_size
                     db = np.mean(a - y_batch)
 
-                    self.weights, self.bias = optimizer.update(epoch+1, self.weights, self.bias, dw, db)
+                    self.weights, self.bias = optimizer.update(
+                        epoch + 1, self.weights, self.bias, dw, db
+                    )
                 elif isinstance(optimizer, IRLS):
                     B = np.concatenate([np.array([self.bias]), self.weights])
                     B = B.astype(float)
-                    self.weights, self.bias = optimizer.update(B, X_batch.astype(float), y_batch.astype(float))
+                    self.weights, self.bias = optimizer.update(
+                        B, X_batch.astype(float), y_batch.astype(float)
+                    )
 
             z = np.dot(X, self.weights) + self.bias
             a = self.sigmoid(z)
@@ -101,7 +108,8 @@ class LogisticRegression:
                 z_val = np.dot(X_val, self.weights) + self.bias
                 a_val = self.sigmoid(z_val)
                 epoch_val_loss = -np.mean(
-                    y_val * np.log(a_val) + (1 - y_val) * np.log(1 - a_val))
+                    y_val * np.log(a_val) + (1 - y_val) * np.log(1 - a_val)
+                )
                 self.val_losses.append(epoch_val_loss)
                 # Early stoppping based on validation loss
                 if epoch_val_loss < best_val_loss:
@@ -112,8 +120,10 @@ class LogisticRegression:
                     patience_counter += 1
 
                 if patience_counter >= patience:
-                    print('Early stopping after epoch', epoch)
-                    print("Reverting to the weights corresponding to the lowest validation loss")
+                    print("Early stopping after epoch", epoch)
+                    print(
+                        "Reverting to the weights corresponding to the lowest validation loss"
+                    )
                     # Add + 1 because -1 corresponds to the last weights so e.g. with
                     # patience equal to 1 you need index -2
 
@@ -130,8 +140,10 @@ class LogisticRegression:
                     patience_counter += 1
 
                 if patience_counter >= patience:
-                    print('Early stopping after epoch', epoch)
-                    print("Reverting to the weights corresponding to the lowest train loss")
+                    print("Early stopping after epoch", epoch)
+                    print(
+                        "Reverting to the weights corresponding to the lowest train loss"
+                    )
                     # Add + 1 because -1 corresponds to the last weights so e.g. with
                     # patience equal to 1 you need index -2
 
@@ -139,31 +151,34 @@ class LogisticRegression:
                     self.bias = self.bias_updates[best_train_loss_index]
                     break
 
-
     def get_params(self):
-        return self.weights, self.bias, self.weights_updates, self.bias_updates, self.losses
+        return (
+            self.weights,
+            self.bias,
+            self.weights_updates,
+            self.bias_updates,
+            self.losses,
+        )
 
     def plot_params(self):
         plt.figure(figsize=(12, 6))
         plt.subplot(1, 2, 1)
         plt.plot(self.weights_updates)
-        plt.title('Weights updates')
-        plt.xlabel('Iteration')
-        plt.ylabel('Weights')
+        plt.title("Weights updates")
+        plt.xlabel("Iteration")
+        plt.ylabel("Weights")
 
         plt.subplot(1, 2, 2)
         plt.plot(self.bias_updates)
-        plt.title('Bias updates')
-        plt.xlabel('Iteration')
-        plt.ylabel('Bias')
+        plt.title("Bias updates")
+        plt.xlabel("Iteration")
+        plt.ylabel("Bias")
 
         plt.tight_layout()
         plt.show()
 
     def plot_loss(self):
         plt.plot(self.val_losses)
-        plt.title('Loss over time')
-        plt.xlabel('Iteration')
-        plt.ylabel('Loss')
-
-        
+        plt.title("Loss over time")
+        plt.xlabel("Iteration")
+        plt.ylabel("Loss")

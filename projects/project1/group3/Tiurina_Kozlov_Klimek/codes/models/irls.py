@@ -43,7 +43,7 @@ class IRLS:
 
     def _update_weights(self, X, y):
         y_pred = self.predict_proba(X, prepare=False)
-        residuals = np.abs(y - y_pred)
+        residuals = np.abs((y+1)/2 - y_pred)
         if self._p == 1:
             residuals[residuals < self._delta] = self._delta
         weights_diag = np.power(residuals, self._p - 2)

@@ -1,0 +1,33 @@
+DATASET: https://www.muratkoklu.com/datasets/
+
+Data Set Name: Rice Dataset (Commeo and Osmancik)
+Abstract: A total of 3810 rice grain's images were taken for the two species (Cammeo and Osmancik), processed and feature inferences were made. 7 morphological features were obtained for each grain of rice.	
+
+Source:
+Ilkay CINAR
+Graduate School of Natural and Applied Sciences, 
+Selcuk University, Konya, TURKEY
+ilkay_cinar@hotmail.com
+
+Murat KOKLU
+Faculty of Technology, 
+Selcuk University, Konya, TURKEY.
+mkoklu@selcuk.edu.tr
+
+DATASET: https://www.muratkoklu.com/datasets/
+
+Relevant Information: In order to classify the rice varieties (Cammeo and Osmancik) used, preliminary processing was applied to the pictures obtained with computer vision system and a total of 3810 rice grains were obtained. Furthermore, 7 morphological features have been inferred for each grain.  A data set has been created for the properties obtained.
+
+Attribute Information:
+1. Area: Returns the number of pixels within the boundaries of the rice grain.
+2. Perimeter: Calculates the circumference by calculating the distance between pixels around the boundaries of the rice grain.
+3. Major Axis Length: The longest line that can be drawn on the rice grain, i.e. the main axis distance, gives.
+4. Minor Axis Length: The shortest line that can be drawn on the rice grain, i.e. the small axis distance, gives.
+5. Eccentricity: It measures how round the ellipse, which has the same moments as the rice grain, is.
+6. Convex Area: Returns the pixel count of the smallest convex shell of the region formed by the rice grain.
+7. Extent: Returns the ratio of the region formed by the rice grain to the bounding box pixels
+8. Class: Commeo and Osmancik.
+
+Relevant Papers / Citation Requests / Acknowledgements:
+Cinar, I. and Koklu, M. (2019). Classification of Rice Varieties Using Artificial Intelligence Methods. International Journal of Intelligent Systems and Applications in Engineering, vol.7, no.3 (Sep. 2019), pp.188-194. https://doi.org/10.18201/ijisae.2019355381.
+	

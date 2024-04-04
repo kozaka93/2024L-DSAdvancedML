@@ -1,0 +1,5 @@
+optimizer: IWLS
+data_name: WaterQuality
+epochs: 500
+batch_size: 7996
+test_split: 0.2

@@ -1,0 +1,6 @@
+optimizer: ADAM
+data_name: HeartDisease
+epochs: 500
+batch_size: 64
+test_split: 0.2
+interactions: True

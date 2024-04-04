@@ -1,0 +1,60 @@
+{
+   
+    "banknote-authentication": {
+        "id": 1462,
+        "size": "small",
+        "X": null,
+        "y": null
+    },
+    "puma8NH": {
+        "id": 816,
+        "size": "small",
+        "X": null,
+        "y": null
+    },
+    "phoneme": {
+        "id": 1489,
+        "size": "small",
+        "X": null,
+        "y": null
+    },
+    "bank32nh" : {
+        "id": 833,
+        "size": "large",
+        "X": null,
+        "y": null
+    },
+    "PizzaCutter1" : {
+        "id": 1443,
+        "size": "large",
+        "X": null,
+        "y": null
+    },
+    "MegaWatt1" : {
+        "id": 1442,
+        "size": "large",
+        "X": null,
+        "y": null
+    },
+   
+    "analcatdata_authorship":{
+        "id": 970,
+        "size": "large",
+        "X": null,
+        "y": null
+    },
+    "mc1":{
+        "id": 1056,
+        "size": "large",
+        "X": null,
+        "y": null
+    },
+    "twonorm":{
+        "id": 1507,
+        "size": "large",
+        "X": null,
+        "y": null
+    }
+
+
+}

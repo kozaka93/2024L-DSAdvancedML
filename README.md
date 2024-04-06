@@ -99,16 +99,14 @@ Summer Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
     <td></td>
     <td>Consultation</td>
   </tr>
-  <tr>
+<tr>
     <td>23.04</td>
-    <td>Consultation</td>
-    <td></td>
+    <td colspan="2">Consultation</td>
     <td></td>
   </tr>
   <tr>
     <td>07.05</td>
-    <td></td>
-    <td>Consultation</td>
+    <td colspan="2">Consultation</td>
     <td></td>
   </tr>
   <tr>
@@ -119,31 +117,25 @@ Summer Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
   </tr>
   <tr>
     <td>14.05</td>
-    <td>Consultation</td>
+    <td colspan="2">Consultation</td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>21.05</td>
-    <td></td>
-    <td>Consultation</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>23.05</td>
-    <td></td>
-    <td></td>
-    <td>Consultation</td>
   </tr>
   <tr>
     <td>28.05</td>
-    <td>Consultation</td>
-    <td></td>
+    <td colspan="2">Consultation</td>
     <td></td>
   </tr>
   <tr>
+    <td>30.05</td>
+    <td></td>
+    <td></td>
+    <td>Consultation</td>
+  </tr>
+  <tr>
     <td>03.06</td>
-    <th colspan="3">Deadline P2</th>
+    <td>Deadline P2</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>04.06</td>

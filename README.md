@@ -101,12 +101,12 @@ Summer Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
   </tr>
 <tr>
     <td>23.04</td>
-    <td colspan="2">Consultation</td>
+    <th colspan="2">Consultation</th>
     <td></td>
   </tr>
   <tr>
     <td>07.05</td>
-    <td colspan="2">Consultation</td>
+    <th colspan="2">Consultation</th>
     <td></td>
   </tr>
   <tr>
@@ -117,12 +117,12 @@ Summer Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
   </tr>
   <tr>
     <td>14.05</td>
-    <td colspan="2">Consultation</td>
+    <th colspan="2">Consultation</th>
     <td></td>
   </tr>
   <tr>
     <td>28.05</td>
-    <td colspan="2">Consultation</td>
+    <th colspan="2">Consultation</th>
     <td></td>
   </tr>
   <tr>
@@ -133,7 +133,7 @@ Summer Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
   </tr>
   <tr>
     <td>03.06</td>
-    <td>Deadline P2</td>
+    <th colspan="3">Deadline P2</th>
     <td></td>
     <td></td>
   </tr>

@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from sklearn.model_selection import StratifiedKFold
 
 from sklearn.base import clone
@@ -13,6 +14,10 @@ def run_grid_search_cv(
         cv=5
 ):
     results_dict = {}
+    X_df = X.copy()
+
+    X = X.values
+    y = y.values
     for feature_selector_grid in feature_selector_grid_params:
         feature_selector_class = feature_selector_grid["selector"]
         selector_params_sets = feature_selector_grid["params"]
@@ -28,7 +33,7 @@ def run_grid_search_cv(
                     model = model_class(**model_params_set)
                     model_str = str(model)
                     if model_str not in results_dict:
-                        results_dict[selector_str][model_str] = []
+                        results_dict[selector_str][model_str] = {"scores": [], "features": []}
                     print(f"Running on: {str(model)} and {str(selector)}")
 
                     skf = StratifiedKFold(cv)
@@ -41,6 +46,8 @@ def run_grid_search_cv(
                         X_train_smaller = selector_clone.transform(X[train_index])
                         X_valid_smaller = selector_clone.transform(X[test_index])
 
+                        selected_features = X_df.columns[selector_clone.get_support()]
+
                         n_new_features = X_train_smaller.shape[1]
 
                         # Train the model
@@ -50,9 +57,15 @@ def run_grid_search_cv(
                         y_preds = model_clone.predict(X_valid_smaller)
 
                         # Calculate the score
-                        score = scoring_function(y[test_index], y_preds, n_new_features)
-                        results_dict[selector_str][model_str].append(score)
-                    print(f"scores: {results_dict[selector_str][model_str]}")
+                        #score = scoring_function(y[test_index], y_preds, n_new_features)
+                        money_score = scoring_function(y[test_index], y_preds, n_new_features, model_clone, X_valid_smaller)
+                        #results_dict[selector_str][model_str].append(score)
+                        results_dict[selector_str][model_str]["features"].append(selected_features.tolist())
+                        results_dict[selector_str][model_str]["scores"].append(money_score)
+
+
+                    print(f"scores: {results_dict[selector_str][model_str]['scores']}")
+                    print(f"features: {results_dict[selector_str][model_str]['features']}")
 
     return results_dict
 
@@ -62,5 +75,23 @@ def apply_transform_to_res(results_dict, numpy_transform=np.mean):
     for selector_name, selector_values in results_dict.items():
         new_results_dict[selector_name] = {}
         for model_name, model_values in selector_values.items():
-            new_results_dict[selector_name][model_name] = numpy_transform(model_values)
+            new_results_dict[selector_name][model_name] = numpy_transform(model_values['scores'])
     return new_results_dict
+
+def profit_scoring(y_true, y_pred, n_features, model, X_valid_smaller):
+    y_probs = model.predict_proba(X_valid_smaller)[:, 1]
+
+    y_true = y_true.ravel()
+    y_pred = y_pred.ravel()
+    y_probs = y_probs.ravel()
+
+    df = pd.DataFrame({'true': y_true, 'pred': y_pred, 'prob': y_probs})
+
+    df = df.sort_values('prob', ascending=False)
+
+    top_20_percent = df.head(int(len(df) * 0.2))
+
+    correct_predictions = ((top_20_percent['pred'] == 1) & (top_20_percent['true'] == 1)).sum()
+    profit = correct_predictions * 10 - n_features * 40
+
+    return profit

@@ -1,5 +1,8 @@
 import numpy as np
 import pandas as pd
+import itertools
+import matplotlib.pyplot as plt
+from collections import Counter
 from sklearn.model_selection import StratifiedKFold
 
 from sklearn.base import clone
@@ -95,3 +98,38 @@ def profit_scoring(y_true, y_pred, n_features, model, X_valid_smaller):
     profit = correct_predictions * 10 - n_features * 40
 
     return profit
+
+def create_feature_score_plot(results_dict):
+    flat_features = list(itertools.chain.from_iterable(itertools.chain.from_iterable(results_dict[key]['QuadraticDiscriminantAnalysis()']['features'] for key in results_dict)))
+
+    feature_counts = Counter(map(str, flat_features))
+    feature_scores = {feature: {"total": 0, "count": 0} for feature in feature_counts.keys()}
+
+    for selector_str in results_dict:
+        for model_str in results_dict[selector_str]:
+            for features, score in zip(results_dict[selector_str][model_str]["features"], results_dict[selector_str][model_str]["scores"]):
+                for feature in features:
+                    feature_scores[str(feature)]["total"] += score
+                    feature_scores[str(feature)]["count"] += 1
+
+    feature_avg_scores = {feature: scores["total"] / scores["count"] for feature, scores in feature_scores.items()}
+
+    feature_avg_scores_sorted = dict(sorted(feature_avg_scores.items(), key=lambda item: item[1]))
+
+    sorted_counts = [feature_counts[feature] for feature in feature_avg_scores_sorted.keys()]
+
+    counts = np.array(sorted_counts)
+    normalized_counts = (counts - counts.min()) / (counts.max() - counts.min())
+
+    cmap = plt.cm.get_cmap('Reds')
+
+    fig, ax = plt.subplots(figsize=(12, 8))
+    sc = ax.bar(feature_avg_scores_sorted.keys(), feature_avg_scores_sorted.values(), color=cmap(normalized_counts))
+    plt.xlabel('Features')
+    plt.ylabel('Average Score')
+    plt.title('Average score for each feature')
+    plt.xticks(rotation='vertical')
+    plt.tight_layout()
+
+    fig.colorbar(plt.cm.ScalarMappable(cmap=cmap), ax=ax, label='Feature Count')  # Add a colorbar
+    plt.show()

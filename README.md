@@ -134,8 +134,6 @@ Summer Semester 2023/24 [@kozaka93](https://github.com/kozaka93) [@woznicak](htt
   <tr>
     <td>03.06</td>
     <th colspan="3">Deadline P2</th>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
     <td>04.06</td>

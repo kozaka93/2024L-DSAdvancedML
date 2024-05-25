@@ -93,7 +93,6 @@ def profit_scoring(y_true, y_pred, n_features, model, X_valid_smaller):
     df = df.sort_values('prob', ascending=False)
 
     top_20_percent = df.head(int(len(df) * 0.2))
-
     correct_predictions = ((top_20_percent['pred'] == 1) & (top_20_percent['true'] == 1)).sum()
     profit = correct_predictions * 10 - n_features * 40
 
@@ -121,7 +120,7 @@ def create_feature_score_plot(results_dict):
     counts = np.array(sorted_counts)
     normalized_counts = (counts - counts.min()) / (counts.max() - counts.min())
 
-    cmap = plt.cm.get_cmap('Reds')
+    cmap = plt.get_cmap('Reds')
 
     fig, ax = plt.subplots(figsize=(12, 8))
     sc = ax.bar(feature_avg_scores_sorted.keys(), feature_avg_scores_sorted.values(), color=cmap(normalized_counts))

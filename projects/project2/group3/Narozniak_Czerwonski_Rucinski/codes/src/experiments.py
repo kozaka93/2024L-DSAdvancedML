@@ -14,7 +14,9 @@ def run_grid_search_cv(
         X,
         y,
         scoring_function,
-        cv=5
+        cv=5,
+        scaler=None,
+        verbose=False,
 ):
     results_dict = {}
     X_df = X.copy()
@@ -41,13 +43,26 @@ def run_grid_search_cv(
 
                     skf = StratifiedKFold(cv)
                     for cv_idx, (train_index, test_index) in enumerate(skf.split(X, y)):
+                        # Create (clone for this set of features) a scaler if given
+                        if scaler is not None:
+                            scaler_clone = clone(scaler).set_output(transform="pandas")
+
                         model_clone = clone(model)
                         selector_clone = clone(selector)
 
+                        # Scale the features first
+                        if scaler is not None:
+                            scaler_clone.fit(X[train_index])
+                            X_train_scaled = scaler_clone.transform(X[train_index])
+                            X_valid_scaled = scaler_clone.transform(X[test_index])
+                        else:
+                            X_train_scaled = X[train_index]
+                            X_valid_scaled = X[test_index]
+
                         # Decrease the number of features
-                        selector_clone.fit(X[train_index], y[train_index])
-                        X_train_smaller = selector_clone.transform(X[train_index])
-                        X_valid_smaller = selector_clone.transform(X[test_index])
+                        selector_clone.fit(X_train_scaled, y[train_index])
+                        X_train_smaller = selector_clone.transform(X_train_scaled)
+                        X_valid_smaller = selector_clone.transform(X_valid_scaled)
 
                         selected_features = X_df.columns[selector_clone.get_support()]
 
@@ -66,9 +81,9 @@ def run_grid_search_cv(
                         results_dict[selector_str][model_str]["features"].append(selected_features.tolist())
                         results_dict[selector_str][model_str]["scores"].append(money_score)
 
-
-                    print(f"scores: {results_dict[selector_str][model_str]['scores']}")
-                    print(f"features: {results_dict[selector_str][model_str]['features']}")
+                    if verbose:
+                        print(f"scores: {results_dict[selector_str][model_str]['scores']}")
+                        print(f"features: {results_dict[selector_str][model_str]['features']}")
 
     return results_dict
 

@@ -16,13 +16,14 @@ def run_grid_search_cv(
     scoring_function,
     cv=5,
     scaler=None,
-    verbose=False,
+    verbose=False
 ):
     results_dict = {}
     X_df = X.copy()
 
     X = X.values
     y = y.values
+    n_features = X.shape[1]
 
     for model_set in model_grid_params:
             print(model_set)
@@ -53,7 +54,7 @@ def run_grid_search_cv(
                 y_preds = ensemble.predict(X_valid_scaled)
 
                 # Calculate the score
-                money_score = scoring_function(y[test_index], y_preds, 3, ensemble, X_valid_scaled)
+                money_score = scoring_function(y[test_index], y_preds, n_features, ensemble, X_valid_scaled)
                 results_dict[model_set]["features"].append(X_df.columns.tolist())
                 results_dict[model_set]["scores"].append(money_score)
 

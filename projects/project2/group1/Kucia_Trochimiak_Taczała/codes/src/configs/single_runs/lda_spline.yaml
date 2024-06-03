@@ -1,0 +1,15 @@
+features:
+  - 100
+  - 101
+  - 102
+  - 105
+
+model_params:
+  - degree
+  - knots
+degree: 4
+knots: 5
+
+model_type: LDASpline
+repeat: 100
+test_size: 0.5

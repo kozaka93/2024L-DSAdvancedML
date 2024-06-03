@@ -1,0 +1,9 @@
+numpy==1.26.4
+pandas==2.2.2
+xgboost==2.0.3
+optuna==3.6.1
+boruta==0.3
+scikit-learn==1.4.2
+seaborn==0.13.2
+Jinja2==3.1.4
+ipykernel==6.29.4

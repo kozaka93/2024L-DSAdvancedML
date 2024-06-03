@@ -1,0 +1,60 @@
+{
+    "precision": 0.6527777777777778,
+    "accuracy": 0.545,
+    "balanced_accuracy": 0.5442881771527086,
+    "mcc": 0.1261446420231542,
+    "f1": 0.29237947122861585,
+    "recall": 0.18837675350701402,
+    "task_score": [
+        {
+            "model_name": "NeuralNetTorch_r30_BAG_L1",
+            "score": 2600.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "NeuralNetFastAI_r11_BAG_L1",
+            "score": 2400.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "WeightedEnsemble_L2",
+            "score": 2350.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "WeightedEnsemble_L3",
+            "score": 2350.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "CatBoost_r69_BAG_L1",
+            "score": 2550.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "NeuralNetTorch_BAG_L2",
+            "score": 2450.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "CatBoost_r137_BAG_L1",
+            "score": 2650.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "CatBoost_r9_BAG_L1",
+            "score": 2450.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "NeuralNetTorch_r79_BAG_L2",
+            "score": 2400.0,
+            "random_state": 0
+        },
+        {
+            "model_name": "ExtraTreesGini_BAG_L2",
+            "score": 2400.0,
+            "random_state": 0
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+{"columns": ["x101", "x102", "x103", "x104", "x105", "x106", "x9"], "method": "boruta: 100 iterations of boruta, then pick only the columns, which were selected the most times (max_freq) (say a the most frequent column had selection count 95 and there were 4 such columns, then we only pick those 4)", "iterations": 100, "max_freq": 100}

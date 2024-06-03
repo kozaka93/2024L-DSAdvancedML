@@ -1,0 +1,26 @@
+features,model_name,method,mean_score,min_score,max_score,std_score,count
+TreeMIF_before_x101_x102_x103_x104,NeuralNetTorch_r14_BAG_L1,refit copy,6900.0,6800.0,7000.0,141.42,2
+TreeMIF_before_x101_x102_x103_x104,NeuralNetTorch_r14_BAG_L1,refit,6900.0,6800.0,7000.0,141.42,2
+x101_x102_x103_x104,NeuralNetTorch_r14_BAG_L1,TreeMIF,6900.0,6800.0,7000.0,141.42,2
+x101_x102_x103_x106,NeuralNetTorch_r197_BAG_L1,Iterative copy,6775.0,6750.0,6800.0,35.36,2
+x101_x102_x103_x106,NeuralNetTorch_r197_BAG_L1,Iterative,6775.0,6750.0,6800.0,35.36,2
+x101_x103_x105_x106,NeuralNetTorch_r30_BAG_L1,Iterative,6766.67,6700.0,6800.0,57.74,3
+x101_x102_x105_x106,NeuralNetTorch_r197_BAG_L1,Iterative,6800.0,6700.0,6900.0,100.0,3
+x101_x102_x103_x105_x106,NeuralNetTorch_r14_BAG_L1,Iterative,6700.0,6650.0,6750.0,70.71,2
+x102_x104_x106,NeuralNetFastAI_r191_BAG_L2,TreeMIF,6733.33,6650.0,6800.0,76.38,3
+TreeMIF_before_x101_x102_x103_x104,NeuralNetFastAI_r11_BAG_L1,refit,6780.0,6650.0,6900.0,90.83,5
+TreeMIF_before_x101_x102_x103_x104,NeuralNetFastAI_r11_BAG_L1,refit copy,6780.0,6650.0,6900.0,90.83,5
+x101_x102_x103_x104,NeuralNetFastAI_r11_BAG_L1,TreeMIF,6780.0,6650.0,6900.0,90.83,5
+x101_x103_x105_x106,NeuralNetTorch_r197_BAG_L1,Iterative,6750.0,6650.0,6850.0,91.29,4
+TreeMIF_before_x101_x102_x103_x104,NeuralNetTorch_BAG_L1,refit,6725.0,6650.0,6800.0,106.07,2
+x101_x102_x103_x104,NeuralNetTorch_BAG_L1,TreeMIF,6725.0,6650.0,6800.0,106.07,2
+TreeMIF_before_x101_x102_x103_x104,NeuralNetTorch_BAG_L1,refit copy,6725.0,6650.0,6800.0,106.07,2
+x101_x103_x105_x106,NeuralNetTorch_r71_BAG_L1,Iterative,6725.0,6650.0,6800.0,106.07,2
+x101_x102_x103_x104,WeightedEnsemble_L3,TreeMIF,6775.0,6650.0,6900.0,119.02,4
+TreeMIF_before_x101_x102_x103_x104,WeightedEnsemble_L3,refit,6775.0,6650.0,6900.0,119.02,4
+TreeMIF_before_x101_x102_x103_x104,WeightedEnsemble_L3,refit copy,6775.0,6650.0,6900.0,119.02,4
+x101_x102_x103_x105_x106,NeuralNetTorch_r197_BAG_L1,Iterative,6750.0,6650.0,6850.0,141.42,2
+x101_x102_x103_x104,SVM,TreeMIF,6850.0,6650.0,7000.0,145.77,5
+TreeMIF_before_x101_x102_x103_x104,NeuralNetFastAI_r191_BAG_L2,refit,6800.0,6650.0,7000.0,158.11,4
+TreeMIF_before_x101_x102_x103_x104,NeuralNetFastAI_r191_BAG_L2,refit copy,6800.0,6650.0,7000.0,158.11,4
+x101_x102_x103_x104,NeuralNetFastAI_r191_BAG_L2,TreeMIF,6800.0,6650.0,7000.0,158.11,4

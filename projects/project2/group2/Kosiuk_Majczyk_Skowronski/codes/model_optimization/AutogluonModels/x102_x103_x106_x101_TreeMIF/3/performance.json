@@ -1,0 +1,60 @@
+{
+    "precision": 0.726530612244898,
+    "accuracy": 0.612,
+    "balanced_accuracy": 0.6114904459617838,
+    "mcc": 0.25922701922140423,
+    "f1": 0.478494623655914,
+    "recall": 0.35671342685370744,
+    "task_score": [
+        {
+            "model_name": "NeuralNetFastAI_r103_BAG_L1",
+            "score": 6500.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "WeightedEnsemble_L3",
+            "score": 6550.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetFastAI_r11_BAG_L1",
+            "score": 6550.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetTorch_r30_BAG_L1",
+            "score": 6600.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "WeightedEnsemble_L2",
+            "score": 6550.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetTorch_r14_BAG_L1",
+            "score": 6400.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetTorch_r86_BAG_L1",
+            "score": 6550.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetTorch_BAG_L1",
+            "score": 6600.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetTorch_r22_BAG_L1",
+            "score": 6650.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetTorch_r79_BAG_L1",
+            "score": 6550.0,
+            "random_state": 3
+        }
+    ]
+}

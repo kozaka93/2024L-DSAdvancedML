@@ -1,0 +1,60 @@
+{
+    "precision": 0.6328125,
+    "accuracy": 0.535,
+    "balanced_accuracy": 0.5342561370245481,
+    "mcc": 0.10253550890414714,
+    "f1": 0.2583732057416268,
+    "recall": 0.1623246492985972,
+    "task_score": [
+        {
+            "model_name": "NeuralNetFastAI_r143_BAG_L1",
+            "score": 2650.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "WeightedEnsemble_L2",
+            "score": 2350.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetTorch_r158_BAG_L1",
+            "score": 2300.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetFastAI_r103_BAG_L1",
+            "score": 2300.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetFastAI_r11_BAG_L1",
+            "score": 2100.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetTorch_r30_BAG_L1",
+            "score": 2100.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "NeuralNetFastAI_r37_BAG_L1",
+            "score": 2200.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "CatBoost_r69_BAG_L1",
+            "score": 2450.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "CatBoost_r137_BAG_L1",
+            "score": 2250.0,
+            "random_state": 3
+        },
+        {
+            "model_name": "CatBoost_r167_BAG_L1",
+            "score": 2300.0,
+            "random_state": 3
+        }
+    ]
+}

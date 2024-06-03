@@ -1,0 +1,884 @@
+model,n_estimators,max_depth,min_samples_split,min_samples_leaf,es,cv1,cv2,cv3,cv4,cv_mean,cv_std,columns
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=12,
+                                    min_samples_split=16, n_estimators=1000,
+                                    random_state=42)",1000,5,16,12,1300.0,1360.0,1260.0,1310.0,1460.0,1347.5,73.9509972887452,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=3,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,6,4,3,1310.0,1360.0,1290.0,1330.0,1450.0,1357.5,58.89609494694873,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=10,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,3,14,10,1190.0,1350.0,1240.0,1240.0,1440.0,1317.5,83.7779804005802,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=16,
+                                    n_estimators=1000, random_state=42)",1000,7,2,16,1300.0,1370.0,1290.0,1330.0,1440.0,1357.5,55.39629951540085,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,7,5,3,1300.0,1360.0,1290.0,1320.0,1450.0,1355.0,60.20797289396148,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=9,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,4,6,9,1290.0,1360.0,1280.0,1250.0,1440.0,1332.5,73.9509972887452,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=10,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,5,6,10,1310.0,1360.0,1270.0,1310.0,1460.0,1350.0,71.06335201775947,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,3,6,6,1190.0,1340.0,1250.0,1250.0,1440.0,1320.0,78.4219357067906,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=4,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,5,13,4,1300.0,1380.0,1250.0,1310.0,1450.0,1347.5,74.95832175282474,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_split=10,
+                                    n_estimators=1000, random_state=42)",1000,6,10,1,1320.0,1370.0,1270.0,1320.0,1460.0,1355.0,70.178344238091,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    n_estimators=1000, random_state=42)",1000,8,2,6,1300.0,1360.0,1280.0,1330.0,1450.0,1355.0,61.84658438426491,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=15,
+                                    n_estimators=1000, random_state=42)",1000,7,2,15,1290.0,1370.0,1300.0,1320.0,1430.0,1355.0,50.24937810560445,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=16,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,7,4,16,1300.0,1370.0,1290.0,1330.0,1440.0,1357.5,55.39629951540085,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=11,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,6,12,11,1300.0,1370.0,1320.0,1310.0,1440.0,1360.0,51.47815070493501,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,7,1260.0,1370.0,1300.0,1340.0,1450.0,1365.0,55.0,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,7,11,7,1300.0,1390.0,1280.0,1320.0,1460.0,1362.5,68.69315832017043,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,7,11,7,1300.0,1390.0,1280.0,1320.0,1460.0,1362.5,68.69315832017043,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,8,1270.0,1400.0,1290.0,1330.0,1440.0,1365.0,58.52349955359813,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,8,15,8,1270.0,1400.0,1290.0,1330.0,1440.0,1365.0,58.52349955359813,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,5,1290.0,1370.0,1300.0,1320.0,1450.0,1360.0,57.87918451395112,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=9,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,7,11,9,1290.0,1360.0,1310.0,1330.0,1430.0,1357.5,45.48351349665063,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,8,1270.0,1400.0,1290.0,1330.0,1440.0,1365.0,58.52349955359813,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=11,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,6,12,11,1300.0,1370.0,1320.0,1310.0,1440.0,1360.0,51.47815070493501,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=7,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,4,8,7,1280.0,1380.0,1250.0,1250.0,1450.0,1332.5,86.13216588476108,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,8,15,11,1280.0,1390.0,1310.0,1320.0,1440.0,1365.0,53.150729063673246,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=14,
+                                    min_samples_split=16, n_estimators=1000,
+                                    random_state=42)",1000,7,16,14,1290.0,1360.0,1310.0,1320.0,1430.0,1355.0,47.16990566028302,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,8,15,8,1270.0,1400.0,1290.0,1330.0,1440.0,1365.0,58.52349955359813,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=9,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,8,14,9,1250.0,1390.0,1300.0,1330.0,1420.0,1360.0,47.43416490252569,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=16, n_estimators=1000,
+                                    random_state=42)",1000,8,16,5,1300.0,1380.0,1300.0,1310.0,1470.0,1365.0,68.00735254367721,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=10,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,10,1280.0,1380.0,1290.0,1300.0,1440.0,1352.5,61.39014578904337,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=8,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,6,14,8,1300.0,1370.0,1280.0,1300.0,1450.0,1350.0,66.70832032063167,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,6,1300.0,1360.0,1280.0,1330.0,1450.0,1355.0,61.84658438426491,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,4,1300.0,1360.0,1290.0,1290.0,1440.0,1345.0,61.84658438426491,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=10,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,4,15,10,1290.0,1360.0,1270.0,1250.0,1450.0,1332.5,79.49056547792323,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=12,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,12,1300.0,1380.0,1300.0,1310.0,1450.0,1360.0,60.41522986797286,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=9,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,9,1250.0,1390.0,1300.0,1330.0,1420.0,1360.0,47.43416490252569,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,8,1270.0,1400.0,1290.0,1330.0,1440.0,1365.0,58.52349955359813,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,7,1260.0,1370.0,1300.0,1340.0,1450.0,1365.0,55.0,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,8,1270.0,1400.0,1290.0,1330.0,1440.0,1365.0,58.52349955359813,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=5,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,7,14,5,1300.0,1360.0,1290.0,1320.0,1430.0,1350.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,6,1300.0,1360.0,1280.0,1330.0,1450.0,1355.0,61.84658438426491,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=10,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,3,14,10,1190.0,1350.0,1240.0,1240.0,1440.0,1317.5,83.7779804005802,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=7,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,5,10,7,1290.0,1380.0,1260.0,1300.0,1430.0,1342.5,66.47367900154165,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=2,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,2,1280.0,1370.0,1290.0,1290.0,1460.0,1352.5,70.13380069552768,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=9,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,9,1250.0,1390.0,1300.0,1330.0,1420.0,1360.0,47.43416490252569,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=12,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,7,15,12,1300.0,1380.0,1300.0,1310.0,1450.0,1360.0,60.41522986797286,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,8,15,11,1280.0,1390.0,1310.0,1320.0,1440.0,1365.0,53.150729063673246,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=16, n_estimators=1000,
+                                    random_state=42)",1000,8,16,11,1280.0,1390.0,1310.0,1320.0,1440.0,1365.0,53.150729063673246,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=15,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,15,1270.0,1380.0,1310.0,1320.0,1420.0,1357.5,44.93050188902857,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=14,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,7,13,14,1290.0,1360.0,1310.0,1320.0,1430.0,1355.0,47.16990566028302,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=14,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,5,11,14,1280.0,1360.0,1280.0,1280.0,1450.0,1342.5,70.13380069552768,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=12,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,12,1300.0,1380.0,1300.0,1310.0,1450.0,1360.0,60.41522986797286,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=15,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,15,1270.0,1380.0,1310.0,1320.0,1420.0,1357.5,44.93050188902857,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=14,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,14,1290.0,1360.0,1310.0,1320.0,1430.0,1355.0,47.16990566028302,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,11,1280.0,1390.0,1310.0,1320.0,1440.0,1365.0,53.150729063673246,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=12,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,12,1300.0,1380.0,1300.0,1310.0,1450.0,1360.0,60.41522986797286,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,11,1280.0,1390.0,1310.0,1320.0,1440.0,1365.0,53.150729063673246,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=10,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,10,1280.0,1380.0,1320.0,1290.0,1410.0,1350.0,47.43416490252569,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=11,
+                                    min_samples_split=3, n_estimators=1000,
+                                    random_state=42)",1000,6,3,11,1300.0,1370.0,1320.0,1310.0,1440.0,1360.0,51.47815070493501,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=14,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,14,1290.0,1390.0,1320.0,1300.0,1420.0,1357.5,49.180788932265,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=13,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,13,1290.0,1380.0,1280.0,1330.0,1430.0,1355.0,55.90169943749474,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,11,1280.0,1390.0,1310.0,1320.0,1440.0,1365.0,53.150729063673246,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=10,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,10,1280.0,1380.0,1320.0,1290.0,1410.0,1350.0,47.43416490252569,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,11,1280.0,1390.0,1310.0,1320.0,1440.0,1365.0,53.150729063673246,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=10,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,10,1280.0,1380.0,1320.0,1290.0,1410.0,1350.0,47.43416490252569,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=11,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,7,14,11,1310.0,1370.0,1300.0,1310.0,1430.0,1352.5,52.14163403653553,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,4,11,12,1270.0,1360.0,1280.0,1250.0,1450.0,1335.0,77.62087348130012,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=13,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,13,1280.0,1390.0,1300.0,1320.0,1430.0,1360.0,52.44044240850758,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=12,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,12,1290.0,1390.0,1310.0,1350.0,1440.0,1372.5,48.15340071064556,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=14,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,14,1290.0,1390.0,1320.0,1300.0,1420.0,1357.5,49.180788932265,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,11,1280.0,1390.0,1310.0,1320.0,1440.0,1365.0,53.150729063673246,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=10,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,10,1280.0,1380.0,1320.0,1290.0,1410.0,1350.0,47.43416490252569,"['x100', 'x101', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=12,
+                                    min_samples_split=16, n_estimators=1000,
+                                    random_state=42)",1000,5,16,12,1260.0,1310.0,1280.0,1350.0,1320.0,1315.0,25.0,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=3,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,6,4,3,1270.0,1350.0,1270.0,1330.0,1340.0,1322.5,31.12474899497183,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=10,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,3,14,10,1210.0,1370.0,1240.0,1230.0,1250.0,1272.5,56.73402858955109,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=16,
+                                    n_estimators=1000, random_state=42)",1000,7,2,16,1250.0,1330.0,1270.0,1360.0,1340.0,1325.0,33.54101966249684,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,7,5,3,1250.0,1350.0,1270.0,1340.0,1330.0,1322.5,31.12474899497183,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=9,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,4,6,9,1210.0,1360.0,1290.0,1310.0,1320.0,1320.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=10,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,5,6,10,1260.0,1320.0,1300.0,1350.0,1320.0,1322.5,17.853571071357123,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,3,6,6,1210.0,1370.0,1230.0,1230.0,1240.0,1267.5,59.31905258852336,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=4,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,5,13,4,1250.0,1310.0,1310.0,1350.0,1320.0,1322.5,16.393596310755,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_split=10,
+                                    n_estimators=1000, random_state=42)",1000,6,10,1,1270.0,1330.0,1290.0,1320.0,1330.0,1317.5,16.393596310755,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=16,
+                                    n_estimators=1000, random_state=42)",1000,8,2,16,1280.0,1340.0,1270.0,1330.0,1330.0,1317.5,27.726341266023542,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=15,
+                                    n_estimators=1000, random_state=42)",1000,7,2,15,1240.0,1340.0,1270.0,1370.0,1340.0,1330.0,36.74234614174768,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=16,
+                                    n_estimators=1000, random_state=42)",1000,8,2,16,1280.0,1340.0,1270.0,1330.0,1330.0,1317.5,27.726341266023542,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=13,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,13,1250.0,1350.0,1270.0,1330.0,1340.0,1322.5,31.12474899497183,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=14,
+                                    min_samples_split=3, n_estimators=1000,
+                                    random_state=42)",1000,7,3,14,1250.0,1350.0,1280.0,1320.0,1320.0,1317.5,24.8746859276655,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=14,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,7,9,14,1250.0,1350.0,1280.0,1320.0,1320.0,1317.5,24.8746859276655,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=16,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,8,4,16,1280.0,1340.0,1270.0,1330.0,1330.0,1317.5,27.726341266023542,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=12,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,6,11,12,1260.0,1330.0,1270.0,1340.0,1340.0,1320.0,29.154759474226505,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=6,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,6,1280.0,1350.0,1280.0,1340.0,1350.0,1330.0,29.154759474226505,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,5,1290.0,1360.0,1300.0,1340.0,1370.0,1342.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,8,15,5,1270.0,1350.0,1290.0,1350.0,1350.0,1335.0,25.98076211353316,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=4,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,4,1260.0,1370.0,1290.0,1340.0,1360.0,1340.0,30.822070014844883,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=2,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,6,12,2,1260.0,1340.0,1270.0,1330.0,1350.0,1322.5,31.12474899497183,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=8,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,4,10,8,1210.0,1350.0,1290.0,1310.0,1330.0,1320.0,22.36067977499789,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,8,14,5,1270.0,1370.0,1300.0,1350.0,1340.0,1340.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=9,
+                                    min_samples_split=16, n_estimators=1000,
+                                    random_state=42)",1000,7,16,9,1270.0,1360.0,1280.0,1340.0,1360.0,1335.0,32.78719262151,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=4,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,4,1270.0,1370.0,1270.0,1340.0,1350.0,1332.5,37.66629793329841,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,5,1280.0,1350.0,1280.0,1320.0,1350.0,1325.0,28.722813232690143,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=3,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,3,1270.0,1350.0,1290.0,1350.0,1370.0,1340.0,30.0,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,4,1290.0,1340.0,1270.0,1340.0,1360.0,1327.5,34.18698582794336,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=6,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,6,11,6,1280.0,1350.0,1280.0,1340.0,1350.0,1330.0,29.154759474226505,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=2,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,2,1250.0,1350.0,1270.0,1340.0,1340.0,1325.0,32.01562118716424,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,8,1280.0,1360.0,1260.0,1370.0,1340.0,1332.5,43.229041164476456,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=10,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,4,7,10,1220.0,1360.0,1280.0,1320.0,1320.0,1320.0,28.284271247461906,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,7,14,3,1280.0,1350.0,1280.0,1350.0,1340.0,1330.0,29.154759474226505,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,8,5,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,7,6,8,1280.0,1360.0,1260.0,1370.0,1340.0,1332.5,43.229041164476456,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=9,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,3,5,9,1210.0,1360.0,1230.0,1230.0,1250.0,1267.5,54.025456962435776,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,7,1270.0,1370.0,1270.0,1360.0,1330.0,1332.5,38.97114317029974,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,8,4,11,1270.0,1360.0,1280.0,1320.0,1330.0,1322.5,28.613807855649,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=5,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,7,5,5,1280.0,1340.0,1280.0,1340.0,1340.0,1325.0,25.98076211353316,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=7,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,5,7,7,1270.0,1330.0,1290.0,1340.0,1320.0,1320.0,18.708286933869708,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,8,1280.0,1390.0,1300.0,1340.0,1340.0,1342.5,31.917863337009265,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,5,1280.0,1350.0,1280.0,1320.0,1350.0,1325.0,28.722813232690143,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,4,1290.0,1350.0,1280.0,1370.0,1350.0,1337.5,34.18698582794336,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=9,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,5,8,9,1250.0,1330.0,1290.0,1350.0,1320.0,1322.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=3,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,8,5,3,1270.0,1350.0,1300.0,1350.0,1360.0,1340.0,23.45207879911715,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,5,1280.0,1350.0,1280.0,1320.0,1350.0,1325.0,28.722813232690143,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,4,1290.0,1350.0,1280.0,1370.0,1350.0,1337.5,34.18698582794336,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,8,1280.0,1390.0,1300.0,1340.0,1340.0,1342.5,31.917863337009265,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=5,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,7,9,5,1280.0,1340.0,1280.0,1340.0,1340.0,1325.0,25.98076211353316,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,5,1280.0,1350.0,1280.0,1320.0,1350.0,1325.0,28.722813232690143,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=4,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,4,1270.0,1370.0,1270.0,1340.0,1350.0,1332.5,37.66629793329841,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,8,4,8,1280.0,1390.0,1300.0,1340.0,1340.0,1342.5,31.917863337009265,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,5,1280.0,1350.0,1280.0,1320.0,1350.0,1325.0,28.722813232690143,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,7,1270.0,1370.0,1270.0,1360.0,1330.0,1332.5,38.97114317029974,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=6,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,6,5,6,1280.0,1350.0,1280.0,1340.0,1350.0,1330.0,29.154759474226505,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,8,13,5,1260.0,1360.0,1270.0,1340.0,1360.0,1332.5,36.99662146737185,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,5,1280.0,1350.0,1280.0,1320.0,1350.0,1325.0,28.722813232690143,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,7,6,4,1290.0,1350.0,1280.0,1370.0,1350.0,1337.5,34.18698582794336,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,8,15,8,1280.0,1390.0,1300.0,1340.0,1340.0,1342.5,31.917863337009265,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=6,
+                                    min_samples_split=3, n_estimators=1000,
+                                    random_state=42)",1000,7,3,6,1280.0,1350.0,1280.0,1340.0,1350.0,1330.0,29.154759474226505,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,8,5,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,5,1280.0,1350.0,1280.0,1320.0,1350.0,1325.0,28.722813232690143,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=5,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,4,8,5,1190.0,1350.0,1280.0,1310.0,1310.0,1312.5,24.8746859276655,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=4,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,4,1270.0,1370.0,1270.0,1340.0,1350.0,1332.5,37.66629793329841,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,8,8,5,1280.0,1350.0,1280.0,1320.0,1350.0,1325.0,28.722813232690143,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,8,6,7,1270.0,1360.0,1300.0,1340.0,1350.0,1337.5,22.776083947860748,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,8,7,6,1280.0,1380.0,1310.0,1340.0,1380.0,1352.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=12,
+                                    min_samples_split=16, n_estimators=1000,
+                                    random_state=42)",1000,5,16,12,1180.0,1300.0,1260.0,1270.0,1280.0,1277.5,14.79019945774904,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=3,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,6,4,3,1190.0,1340.0,1250.0,1260.0,1300.0,1287.5,35.61951712193752,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=10,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,3,14,10,1190.0,1330.0,1190.0,1240.0,1260.0,1255.0,50.24937810560445,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=16,
+                                    n_estimators=1000, random_state=42)",1000,7,2,16,1200.0,1340.0,1240.0,1290.0,1330.0,1300.0,39.370039370059054,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,7,5,3,1210.0,1340.0,1240.0,1320.0,1330.0,1307.5,39.607448794387146,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=9,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,4,6,9,1140.0,1320.0,1230.0,1290.0,1290.0,1282.5,32.69174207655505,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=10,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,5,6,10,1180.0,1310.0,1260.0,1280.0,1290.0,1285.0,18.027756377319943,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,3,6,6,1200.0,1330.0,1200.0,1240.0,1260.0,1257.5,47.10360920354193,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=4,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,5,13,4,1190.0,1310.0,1250.0,1290.0,1280.0,1282.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_split=10,
+                                    n_estimators=1000, random_state=42)",1000,6,10,1,1230.0,1350.0,1250.0,1260.0,1300.0,1290.0,39.370039370059054,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,6,1220.0,1330.0,1270.0,1280.0,1310.0,1297.5,23.84848003542364,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=15,
+                                    n_estimators=1000, random_state=42)",1000,8,2,15,1210.0,1320.0,1240.0,1300.0,1300.0,1290.0,30.0,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=16,
+                                    n_estimators=1000, random_state=42)",1000,7,2,16,1200.0,1340.0,1240.0,1290.0,1330.0,1300.0,39.370039370059054,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=13,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,7,4,13,1200.0,1340.0,1260.0,1300.0,1310.0,1302.5,28.613807855649,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=13,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,13,1200.0,1340.0,1260.0,1300.0,1310.0,1302.5,28.613807855649,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=6,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,7,4,6,1210.0,1350.0,1250.0,1300.0,1330.0,1307.5,37.66629793329841,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,8,4,6,1220.0,1330.0,1270.0,1280.0,1310.0,1297.5,23.84848003542364,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_split=11,
+                                    n_estimators=1000, random_state=42)",1000,6,11,1,1210.0,1330.0,1270.0,1260.0,1310.0,1292.5,28.613807855649,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,4,1230.0,1320.0,1270.0,1320.0,1320.0,1307.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=8,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,8,4,8,1200.0,1330.0,1260.0,1290.0,1310.0,1297.5,25.8602010819715,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=3,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,6,5,3,1190.0,1340.0,1250.0,1260.0,1300.0,1287.5,35.61951712193752,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,4,1230.0,1320.0,1270.0,1320.0,1320.0,1307.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=7,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,6,8,7,1200.0,1330.0,1240.0,1290.0,1310.0,1292.5,33.44772040064913,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,5,1210.0,1360.0,1260.0,1270.0,1310.0,1300.0,39.370039370059054,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=3, n_estimators=1000,
+                                    random_state=42)",1000,7,3,8,1210.0,1330.0,1260.0,1310.0,1320.0,1305.0,26.92582403567252,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,7,5,3,1210.0,1340.0,1240.0,1320.0,1330.0,1307.5,39.607448794387146,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=7,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,6,7,7,1200.0,1330.0,1240.0,1290.0,1310.0,1292.5,33.44772040064913,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=2,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,4,5,2,1170.0,1330.0,1230.0,1280.0,1280.0,1280.0,35.35533905932738,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=11,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,11,1190.0,1330.0,1250.0,1290.0,1280.0,1287.5,28.613807855649,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=5,
+                                    min_samples_split=16, n_estimators=1000,
+                                    random_state=42)",1000,5,16,5,1180.0,1310.0,1260.0,1270.0,1290.0,1282.5,19.20286436967152,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=5,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,5,1200.0,1330.0,1260.0,1310.0,1300.0,1300.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,4,1230.0,1320.0,1270.0,1320.0,1320.0,1307.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=2,
+                                    min_samples_split=3, n_estimators=1000,
+                                    random_state=42)",1000,6,3,2,1210.0,1330.0,1270.0,1270.0,1290.0,1290.0,24.49489742783178,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,7,9,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=9,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,6,9,9,1230.0,1320.0,1250.0,1300.0,1290.0,1290.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,8,11,7,1200.0,1350.0,1260.0,1280.0,1330.0,1305.0,36.40054944640259,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=10,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,7,13,10,1220.0,1340.0,1260.0,1320.0,1300.0,1305.0,29.58039891549808,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=4, min_samples_leaf=8,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,4,6,8,1150.0,1320.0,1220.0,1290.0,1290.0,1280.0,36.74234614174768,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=9,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,7,9,9,1210.0,1340.0,1260.0,1310.0,1300.0,1302.5,28.613807855649,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=6,
+                                    min_samples_split=3, n_estimators=1000,
+                                    random_state=42)",1000,6,3,6,1200.0,1320.0,1250.0,1300.0,1280.0,1287.5,25.8602010819715,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,3,1210.0,1330.0,1260.0,1300.0,1300.0,1297.5,24.8746859276655,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,7,6,4,1230.0,1320.0,1270.0,1320.0,1320.0,1307.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,8,5,5,1210.0,1360.0,1270.0,1270.0,1300.0,1300.0,36.74234614174768,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,7,1200.0,1350.0,1260.0,1280.0,1330.0,1305.0,36.40054944640259,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=10,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,6,10,10,1220.0,1330.0,1250.0,1310.0,1300.0,1297.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=6,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,6,1210.0,1350.0,1250.0,1300.0,1330.0,1307.5,37.66629793329841,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,8,1210.0,1330.0,1260.0,1310.0,1320.0,1305.0,26.92582403567252,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,8,9,7,1200.0,1350.0,1260.0,1280.0,1330.0,1305.0,36.40054944640259,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=9,
+                                    min_samples_split=13, n_estimators=1000,
+                                    random_state=42)",1000,6,13,9,1230.0,1320.0,1250.0,1300.0,1290.0,1290.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=2,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,2,1190.0,1330.0,1250.0,1310.0,1320.0,1302.5,31.12474899497183,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,7,6,6,1210.0,1350.0,1250.0,1300.0,1330.0,1307.5,37.66629793329841,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=5,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,7,9,5,1200.0,1330.0,1260.0,1310.0,1300.0,1300.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=5, min_samples_leaf=4,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,5,7,4,1190.0,1310.0,1260.0,1270.0,1290.0,1282.5,19.20286436967152,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=3, min_samples_leaf=3,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,3,4,3,1200.0,1330.0,1190.0,1240.0,1260.0,1255.0,50.24937810560445,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=6,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,7,5,6,1210.0,1350.0,1250.0,1300.0,1330.0,1307.5,37.66629793329841,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,8,12,7,1200.0,1350.0,1260.0,1280.0,1330.0,1305.0,36.40054944640259,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=5,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,5,1200.0,1330.0,1260.0,1310.0,1300.0,1300.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=4,
+                                    min_samples_split=15, n_estimators=1000,
+                                    random_state=42)",1000,6,15,4,1220.0,1330.0,1230.0,1290.0,1320.0,1292.5,38.97114317029974,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_split=8,
+                                    n_estimators=1000, random_state=42)",1000,7,8,1,1210.0,1330.0,1250.0,1280.0,1270.0,1282.5,29.47456530637899,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,4,1230.0,1320.0,1270.0,1320.0,1320.0,1307.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,8,1210.0,1330.0,1260.0,1310.0,1320.0,1305.0,26.92582403567252,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=2,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,7,6,2,1200.0,1360.0,1240.0,1310.0,1310.0,1305.0,42.72001872658765,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=6,
+                                    min_samples_split=3, n_estimators=1000,
+                                    random_state=42)",1000,8,3,6,1220.0,1330.0,1270.0,1280.0,1310.0,1297.5,23.84848003542364,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,7,11,3,1200.0,1320.0,1250.0,1280.0,1290.0,1285.0,25.0,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=7,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,6,9,7,1200.0,1330.0,1240.0,1290.0,1310.0,1292.5,33.44772040064913,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=5,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,8,4,5,1210.0,1360.0,1270.0,1270.0,1300.0,1300.0,36.74234614174768,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,4,1230.0,1320.0,1270.0,1320.0,1320.0,1307.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=3,
+                                    n_estimators=1000, random_state=42)",1000,6,2,3,1190.0,1340.0,1250.0,1260.0,1300.0,1287.5,35.61951712193752,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=5,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,7,9,5,1200.0,1330.0,1260.0,1310.0,1300.0,1300.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_split=5,
+                                    n_estimators=1000, random_state=42)",1000,7,5,1,1200.0,1340.0,1260.0,1300.0,1300.0,1300.0,28.284271247461906,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=2,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,7,4,2,1190.0,1340.0,1250.0,1300.0,1340.0,1307.5,36.99662146737185,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,7,5,3,1210.0,1340.0,1240.0,1320.0,1330.0,1307.5,39.607448794387146,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,7,6,6,1210.0,1350.0,1250.0,1300.0,1330.0,1307.5,37.66629793329841,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,8,1210.0,1330.0,1260.0,1310.0,1320.0,1305.0,26.92582403567252,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=3, n_estimators=1000,
+                                    random_state=42)",1000,8,3,7,1200.0,1350.0,1260.0,1280.0,1330.0,1305.0,36.40054944640259,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=9, n_estimators=1000,
+                                    random_state=42)",1000,7,9,4,1210.0,1340.0,1260.0,1320.0,1300.0,1305.0,29.58039891549808,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=14,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,6,6,14,1200.0,1350.0,1250.0,1280.0,1300.0,1295.0,36.40054944640259,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,3,1220.0,1340.0,1260.0,1280.0,1300.0,1295.0,29.58039891549808,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=2,
+                                    min_samples_split=5, n_estimators=1000,
+                                    random_state=42)",1000,8,5,2,1230.0,1360.0,1250.0,1290.0,1300.0,1300.0,39.370039370059054,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,4,1230.0,1320.0,1270.0,1320.0,1320.0,1307.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=5,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,5,1200.0,1330.0,1260.0,1310.0,1300.0,1300.0,25.495097567963924,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=4,
+                                    min_samples_split=8, n_estimators=1000,
+                                    random_state=42)",1000,7,8,4,1230.0,1320.0,1270.0,1320.0,1320.0,1307.5,21.65063509461097,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=3,
+                                    min_samples_split=7, n_estimators=1000,
+                                    random_state=42)",1000,7,7,3,1210.0,1330.0,1260.0,1300.0,1300.0,1297.5,24.8746859276655,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=9,
+                                    min_samples_split=4, n_estimators=1000,
+                                    random_state=42)",1000,7,4,9,1210.0,1340.0,1260.0,1310.0,1300.0,1302.5,28.613807855649,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=6, min_samples_leaf=6,
+                                    min_samples_split=6, n_estimators=1000,
+                                    random_state=42)",1000,6,6,6,1200.0,1320.0,1250.0,1300.0,1280.0,1287.5,25.8602010819715,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,7,11,8,1210.0,1330.0,1260.0,1310.0,1320.0,1305.0,26.92582403567252,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=8, min_samples_leaf=7,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,8,10,7,1200.0,1350.0,1260.0,1280.0,1330.0,1305.0,36.40054944640259,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=10, n_estimators=1000,
+                                    random_state=42)",1000,7,10,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,7,11,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,8,1210.0,1330.0,1260.0,1310.0,1320.0,1305.0,26.92582403567252,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,7,11,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=12, n_estimators=1000,
+                                    random_state=42)",1000,7,12,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=8,
+                                    min_samples_split=11, n_estimators=1000,
+                                    random_state=42)",1000,7,11,8,1210.0,1330.0,1260.0,1310.0,1320.0,1305.0,26.92582403567252,"['x100', 'x101', 'x102', 'x105', 'x270']"
+"RandomForestClassifierWithThreshold(max_depth=7, min_samples_leaf=7,
+                                    min_samples_split=14, n_estimators=1000,
+                                    random_state=42)",1000,7,14,7,1200.0,1340.0,1270.0,1310.0,1330.0,1312.5,26.80951323690902,"['x100', 'x101', 'x102', 'x105', 'x270']"

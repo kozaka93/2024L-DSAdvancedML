@@ -1,0 +1,43 @@
+name: lda_poly
+method: grid
+metric:
+  goal: maximize
+  name: gain
+
+parameters:
+  model_type:
+    value: LDAPolynomial
+  features:
+    values:
+      - [102, 103, 105]
+      - [0, 102, 105]
+      - [101, 102, 103]
+      - [0, 100, 102, 105]
+      - [101, 102, 103, 105]
+      - [0, 101, 102, 105]
+      - [0, 101, 102, 103]
+      - [100, 101, 102, 105]
+      - [0, 100, 102, 105]
+      - [0, 102, 103, 105]
+      - [0, 101, 102, 103, 105]
+      - [100, 101, 102, 103, 105]
+  model_params:
+    value:
+      - interactions_only
+      - degree
+  interactions_only:
+    values:
+        - False
+        - True
+  degree:
+    values:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+  test_size:
+    value: 0.5
+  repeat:
+    value: 5

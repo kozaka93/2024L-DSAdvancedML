@@ -1,0 +1,16 @@
+features:
+  - 0
+  - 102
+  - 103
+  - 105
+
+model_params:
+  - n_estimators
+  - max_depth
+
+n_estimators: 100
+max_depth: 5
+
+model_type: RandomForest
+repeat: 100
+test_size: 0.5

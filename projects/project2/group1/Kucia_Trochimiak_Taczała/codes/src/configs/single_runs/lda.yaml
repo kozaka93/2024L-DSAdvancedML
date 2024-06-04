@@ -1,0 +1,8 @@
+features:
+  - 0
+  - 102
+  - 105
+
+model_type: LDA
+repeat: 100
+test_size: 0.5

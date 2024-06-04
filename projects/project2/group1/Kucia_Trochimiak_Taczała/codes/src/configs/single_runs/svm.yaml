@@ -1,0 +1,16 @@
+features:
+  - 101
+  - 102
+  - 103
+  - 105
+
+model_params:
+  - kernel
+  - degree
+
+kernel: poly
+degree: 2
+
+model_type: SVM
+repeat: 100
+test_size: 0.5

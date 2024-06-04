@@ -1,0 +1,14 @@
+features:
+  - 101
+  - 102
+  - 103
+  - 105
+
+model_type: LDAPolynomial
+repeat: 10000
+test_size: 0.2
+model_params:
+  - degree
+  - interactions_only
+degree: 2
+interactions_only: false

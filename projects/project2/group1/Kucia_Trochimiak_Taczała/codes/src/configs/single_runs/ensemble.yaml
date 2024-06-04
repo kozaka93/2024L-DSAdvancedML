@@ -1,0 +1,20 @@
+features:
+  - 101
+  - 102
+  - 103
+  - 105
+
+model_params:
+  - kernel
+  - svm_degree
+  - poly_degree
+  - interactions_only
+
+kernel: poly
+svm_degree: 2
+poly_degree: 2
+interactions_only: false
+
+model_type: EnsembleLDAPolySVM
+repeat: 100
+test_size: 0.2

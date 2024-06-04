@@ -1,0 +1,36 @@
+name: nb
+method: grid
+metric:
+  goal: maximize
+  name: gain_mean
+
+parameters:
+  model_type:
+    value: NaiveBayes
+  features:
+    values:
+      - [100, 102]
+      - [102, 103, 105]
+      - [0, 102, 105]
+      - [101, 102, 103]
+      - [0, 100, 102, 105]
+      - [101, 102, 103, 105]
+      - [0, 101, 102, 105]
+      - [0, 101, 102, 103]
+      - [100, 101, 102, 105]
+      - [0, 100, 102, 105]
+      - [0, 102, 103, 105]
+      - [0, 101, 102, 103, 105]
+      - [100, 101, 102, 103, 105]
+  model_params:
+    value:
+      - var_smoothing
+  var_smoothing:
+    values:
+      - 0.000000001
+      - 0.0000000001
+      - 0.00000001
+  test_size:
+    value: 0.2
+  repeat:
+    value: 10
